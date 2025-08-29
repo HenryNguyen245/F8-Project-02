@@ -9,6 +9,7 @@
 html,
 body {
   scroll-behavior: smooth;
+  height: 10000px;
 }
 
 html {
@@ -17,10 +18,10 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Sen", sans-serif;
+  font-family: "poppins", "Sen", sans-serif;
 }
 
-.content {
+.main-content {
   width: 1170px;
   max-width: cal(100% - 4.8rem);
   margin: 0 auto;
@@ -32,16 +33,19 @@ a {
 
 .btn {
   display: inline-block;
-  width: 180px;
-  min-width: 9.8rem;
+  /*tự ước lượng từ 12-16px */
+  padding: 0 16px;
+  /* tạo chiều cao cho btn */
+  line-height: 50px;
+  /* kiểm tra độ rộng của nút bấm nhỏ nhất trong thiết kế */
+  min-width: 118px;
   /* height: 64px; */
   font-weight: 600;
   font-size: 1.6rem;
-  border-radius: 32px;
+  border-radius: 24.5px;
   background-color: var(--primary-color);
   color: #fff;
   text-align: center;
-  padding: 1.8rem 1.6rem;
 }
 
 .btn:hover {
@@ -49,16 +53,66 @@ a {
 }
 
 /* ---------------Header--------------- */
-.fixed-header {
+.header {
+  background-color: #fffcf4;
+  /* height: 10000px; */
+}
+
+.header.fixed {
   background: #fffcf4;
-  padding-top: 26px;
+  /* padding-top: 26px; */
   position: sticky;
-  top: -26px;
+  top: -28px;
   z-index: 1;
 }
 
-.navbar {
+.header .body {
   display: flex;
   align-items: center;
-  padding: 12px 0;
+  padding: 36px 0 8px;
+}
+
+/* dịch chuyển cụm navbar và button signup sang bên phải */
+.nav {
+  margin-left: auto;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav a {
+  /* tăng độ rộng của nút bấm tối ưu vùng bấm */
+  padding: 8px 21px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  align-items: center;
+  color: #5f5b53;
+}
+
+.nav a:hover,
+.nav li.active a {
+  position: relative;
+  /* font-weight: 600;  không dùng font weight tránh ảnh hưởng các thẻ bên cạnh khi hover */
+  text-shadow: 1px 0 0 currentColor;
+  color: #171100;
+}
+
+/* làm dấu gạch chân */
+.nav li.active a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 21px;
+  bottom: 6px;
+  width: 12px;
+  height: 2px;
+  background: #171100;
+  border-radius: 1px;
+}
+
+.sign-up-btn {
+  min-width: 144px;
+  background-color: #171100;
 }
