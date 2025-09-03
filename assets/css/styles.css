@@ -75,6 +75,25 @@ a {
   line-height: 1.67; /* 166.667% */
 }
 
+/* ẩn bớt nội dung chừa lại 1 dòng khi nội dung quá dài  */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1); /* hỗ trợ tốt trên Chrome, Safari, Edge. */
+  line-clamp: var(
+    --line-clamp,
+    1
+  ); /* thuộc CSS Overflow Module Level 3 (đang dần được hỗ trợ trên Firefox & các browser khác). */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+/* tránh trường hợp 1 từ quá dài không có dấu cách dùng word-break */
+.break-all {
+  word-break: break-all;
+}
 /* ---------------Header--------------- */
 .header {
   background-color: #fffcf4;
@@ -371,6 +390,7 @@ a {
 }
 
 .popular .course-item .title a {
+  padding-right: 6px;
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 1.67;
