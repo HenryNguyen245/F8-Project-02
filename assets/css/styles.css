@@ -9,7 +9,6 @@
 html,
 body {
   scroll-behavior: smooth;
-  height: 10000px;
 }
 
 html {
@@ -67,6 +66,14 @@ a {
 .heading.lv2 {
   font-size: 3.8rem;
   line-height: 1.26;
+}
+
+.heading.lv3 {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #fff;
 }
 .desc {
   color: #5f5b53;
@@ -690,4 +697,88 @@ a {
 .blog .dots {
   margin-top: 38px;
   justify-content: center;
+}
+
+/* footer */
+
+.footer {
+  padding: 96px 0 28px;
+  background-color: #2e2100;
+}
+
+.footer .row {
+  position: relative;
+  display: flex;
+  padding-bottom: 38px;
+}
+
+.footer .row .column {
+  width: 21.6%;
+}
+
+.footer .row .column:nth-child(1) {
+  width: 35%;
+}
+
+.footer .desc {
+  margin: 18px 0;
+  max-width: 267px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+}
+
+.footer .social {
+  display: flex;
+  gap: 18px;
+}
+
+.footer .heading.lv3 {
+  position: relative;
+  padding-bottom: 14px;
+}
+.footer .heading.lv3::after {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+
+  content: "";
+  height: 1px;
+  width: 130px;
+  background: #59554b;
+}
+
+.footer .column .list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.footer .column .list a {
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+}
+
+.footer .column .list strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer .row::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #59554b;
+}
+
+.footer .copyrright {
+  margin: 28px auto;
+  color: #807d74;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
 }
