@@ -94,6 +94,23 @@ a {
 .break-all {
   word-break: break-all;
 }
+
+.dots {
+  display: flex;
+  margin-top: 28px;
+}
+.dot {
+  margin-right: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #634700;
+  cursor: pointer;
+}
+.dot.active {
+  cursor: default;
+  background-color: #ffb900;
+}
 /* ---------------Header--------------- */
 .header {
   background-color: #fffcf4;
@@ -477,7 +494,7 @@ a {
   line-height: 1.86; /* 185.714% */
 }
 
-.feedback-item .info .dots {
+/* .feedback-item .info .dots {
   display: flex;
   margin-top: 28px;
 }
@@ -494,7 +511,7 @@ a {
 .feedback-item .info .dot.active {
   cursor: default;
   background-color: #ffb900;
-}
+} */
 /* feedback content */
 .feedback-item .content {
   max-width: 66%; /*(bằng maxwidth là 770px chia cho width content là 1170px) */
@@ -569,4 +586,108 @@ a {
 
 .features-2nd .content {
   width: 49%;
+}
+
+/* blog */
+.blog {
+  margin-top: 135px;
+  padding: 96px 0;
+  background-color: #fffcf4;
+}
+
+.blog-top {
+  text-align: center;
+}
+
+.blog .blog-top .desc {
+  margin: 16px auto 0;
+  max-width: 448px;
+  color: #696262;
+  font-size: 1.6rem;
+  line-height: 1.75; /* 175% */
+}
+
+.blog .blog-list {
+  margin-top: 55px;
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.blog .blog-item {
+  flex-shrink: 0;
+
+  width: calc(33.33% - 20px);
+  background-color: #fff;
+  border-radius: 16px;
+}
+
+.blog .blog-item:hover {
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+}
+
+.blog .blog-item .thumb {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.blog .blog-item .info {
+  padding: 20px 20px 28px;
+}
+
+.blog .blog-item .date {
+  position: relative;
+  display: inline-flex;
+  padding-bottom: 12px;
+  align-items: center;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #5f5b53;
+}
+
+.blog .blog-item .date::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  margin-right: 4px;
+}
+
+.blog .blog-item .date::after {
+  position: absolute;
+  left: 0;
+  right: -27px;
+  bottom: 0;
+  content: "";
+  display: inline-block;
+  border-radius: 0.5px;
+  height: 1px;
+  background: #e2dfda;
+}
+
+.blog .blog-item .title a {
+  display: inline-block;
+  margin: 12px 0;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #171100;
+}
+
+.blog .blog-item .btn {
+  background-color: #171100;
+  font-size: 1.4rem;
+}
+
+.blog .blog-item .btn:hover {
+  background-color: var(--primary-color);
+}
+
+.blog .dots {
+  margin-top: 38px;
+  justify-content: center;
 }
